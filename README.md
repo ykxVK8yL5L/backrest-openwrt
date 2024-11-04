@@ -4,7 +4,7 @@
 
 **介绍**
 
-Backrest 是一款基于 restic 构建的可通过 Web 访问的备份解决方案。Backrest 提供了一个 WebUI，它封装了 restic CLI，可轻松创建存储库、浏览快照和恢复文件。此外，Backrest 可以在后台运行，并采用自定的方法来安排快照和协调存储库健康操作。
+Backrest 是一款基于 [restic](https://restic.net/) 构建的可通过 Web 访问的备份解决方案。Backrest 提供了一个 WebUI，它封装了 restic CLI，可轻松创建存储库、浏览快照和恢复文件。此外，Backrest 可以在后台运行，并采用自定的方法来安排快照和协调存储库健康操作。
 
 # backrest-OpenWrt
 
@@ -26,6 +26,11 @@ opkg install luci-i18n-backrest-zh-cn_git-24.309.31899-1cc9a85_all.ipk
 ### luci-app-backrest
 
 ![luci-app-backrest screenshot](assets/luci-screenshot.png)
+
+## 所用项目
+[restic](https://restic.net/)   
+[backrest](https://github.com/garethgeorge/backrest)
+
 
 ## FAQ
 
