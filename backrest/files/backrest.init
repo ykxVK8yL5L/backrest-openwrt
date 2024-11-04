@@ -43,6 +43,7 @@ start_service() {
 
 	procd_open_instance
 	procd_set_param command /usr/bin/$APP -bind-address $addr:$port -data-dir $config_path -config-file $config_path/config.json
+	procd_append_param env XDG_CACHE_HOME="$config_path"
 	procd_close_instance
 
 }
