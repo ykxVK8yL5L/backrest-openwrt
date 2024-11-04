@@ -1,0 +1,137 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: luasrc/model/cbi/backrest.lua:121
+msgid "FAQ"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:41
+msgid "Installed Web Interface"
+msgstr ""
+
+#: luasrc/controller/backrest.lua:5
+msgid "NAS"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:37 luasrc/controller/backrest.lua:6
+msgid "backrest"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:38
+msgid ""
+"Backrest is a web-accessible backup solution built on top of restic."
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:46
+msgid "backrestUI"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:78
+msgid "Recommand: run"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:130
+msgid ""
+"The content of the variable is protocol://server:port. The protocol value is "
+"commonly either http or socks5."
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:43
+msgid "Webui React"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:64
+msgid "all address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:57
+msgid "configure"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:83
+msgid "download"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:82
+msgid "download configuration"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:123
+msgid "enable proxy"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:50
+msgid "global"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:61
+msgid "listen address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:68
+msgid "listen port"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:63
+msgid "local network address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:62
+msgid "localhost address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:132
+msgid "log"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:111
+msgid "password"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:136
+msgid "path"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:117
+msgid "proxy"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:126
+msgid "proxy address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:28
+msgid "backrest address"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:74
+msgid "backrest configuration file path"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:30
+msgid "backrest not run"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:27
+msgid "backrest running"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:39
+msgid "backrest state"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:54
+msgid "run backrest as daemon"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:80
+msgid "than updaload configuration to here."
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:80
+msgid "to setup configuration on pc,"
+msgstr ""
+
+#: luasrc/model/cbi/backrest.lua:106
+msgid "username"
+msgstr ""

@@ -1,0 +1,9 @@
+
+config global 'global'
+	option enabled '0'
+
+config conf 'config'
+	option config_path '/etc/backrest/backrest.conf'
+	option port '9898'
+	option addr_type 'lan'
+
