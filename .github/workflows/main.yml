@@ -41,6 +41,9 @@ jobs:
                 #   sdk: "https://archive.openwrt.org/releases/19.07.7/targets/ar71xx/nand/openwrt-sdk-19.07.7-ar71xx-nand_gcc-7.5.0_musl.Linux-x86_64.tar.xz"
       steps:
         - uses: actions/checkout@v2
+        - uses: actions/setup-go@v5
+          with:
+            go-version: '1.22.0'
         - name: Install build requirements
           run: |
             sudo apt-get update
