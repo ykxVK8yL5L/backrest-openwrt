@@ -47,8 +47,6 @@ m =
 )
 
 
-
-
 s = m:section(TypedSection, 'global', translate('global'))
 s.addremove = false
 s.anonymous = true
@@ -73,36 +71,5 @@ o.default = 5572
 o.datatype = 'port'
 o.rmempty = false
 
-o = s:option(Value, 'config_path', translate('backrest configuration file path'))
-o.placeholder = '/etc/backrest/backrest.conf'
-o.default = '/etc/backrest/backrest.conf'
-o.rmempty = false
-o.description = translate("Recommand: run ") ..
-    "<span style=\"background: lightgray;border-radius: 4px;padding-left: 4px;padding-right: 4px;\">backrest config --config backrest.conf</span>" ..
-    translate(" to setup configuration on pc,") .. "</br>" .. translate("than updaload configuration to here.")
-
-o = s:option(Button,"config_download",translate("download configuration"))
-o.inputtitle = translate("download")
-o.inputstyle = "apply"
-o.write = function()
-  	Download()
-end
-
-function Download()
-	local t,e
-	t=nixio.open(uci:get('backrest', 'config', 'config_path'),"r")
-	luci.http.header('Content-Disposition','attachment; filename="backrest.conf"')
-	luci.http.prepare_content("application/octet-stream")
-	while true do
-		e=t:read(nixio.const.buffersize)
-		if(not e)or(#e==0)then
-			break
-		else
-			luci.http.write(e)
-		end
-	end
-	t:close()
-	luci.http.close()
-end
 
 return m

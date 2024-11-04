@@ -1,0 +1,50 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2019 Gareth <garethgeorge97@gmail.com>
+
+USE_PROCD=1
+START=95
+STOP=10
+
+
+
+APP=backrest
+CONFIGURATION=backrest
+
+_info() {
+	logger -p daemon.info -t "$APP" "$*"
+}
+
+_err() {
+	logger -p daemon.err -t "$APP" "$*"
+}
+
+start_service() {
+
+	local enabled
+	local addr_type
+	local port
+
+    
+	config_get enabled global enabled
+	config_get addr_type config addr_type
+	config_get port config port
+	
+	
+	if [[ "${addr_type}" == "local" ]]; then
+		addr="$(uci get network.loopback.ipaddr)"
+	elif [[ "${addr_type}" == "lan" ]]; then
+		addr="$(uci get network.lan.ipaddr)"
+	elif [[ "${addr_type}" == "all" ]]; then
+		addr=""
+	fi
+	[ "$enabled" == "1" ] || { _info "Instance \"backrest\" disabled."; return 1; }
+
+	procd_open_instance
+	procd_set_param command /usr/bin/$APP -bind-address $addr:$port
+	procd_close_instance
+
+}
+
+service_triggers() {
+	procd_add_reload_trigger "backrest"
+}

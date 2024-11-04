@@ -1,3 +1,4 @@
+# 仅支持x86_64   
 # backrest-OpenWrt
 
 -   backrest

@@ -12,39 +12,20 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=backrest
 PKG_VERSION:=1.6.1
 PKG_RELEASE:=1
+#PKG_SOURCE_URL:=https://github.com/garethgeorge/backrest.git
+# PKG_SOURCE_URL := https://github.com/garethgeorge/backrest/releases/download/v1.6.1
+# PKG_SOURCE:=backrest_Linux_x86_64.tar.gz
+# PKG_HASH=721856c8a5a59903ab22acc8cc57b042567bebe120b03576447b4b84f4861ad5
+# PKG_LICENSE:=GPLv3
+# PKG_MAINTAINER:=Gareth <garethgeorge97@gmail.com>
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/garethgeorge/backrest.git
-PKG_SOURCE_DATE:=2024-10-20
-#PKG_SOURCE_VERSION:=
-PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-#PKG_MIRROR_HASH:=
-
-PKG_LICENSE:=GPLv3
-PKG_MAINTAINER:=Gareth <garethgeorge97@gmail.com>
-
-PKG_BUILD_DEPENDS:=golang/host
-PKG_BUILD_PARALLEL:=1
-PKG_USE_MIPS16:=0 # https://github.com/openwrt/packages/issues/8498
-GO_PKG:=github.com/garethgeorge/backrest
-GO_PKG_EXCLUDES:=test
 
 include $(INCLUDE_DIR)/package.mk
-include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
-
-# GO_PKG_LDFLAGS:=
-GO_PKG_LDFLAGS_X:=\
-	main.Version=v$(PKG_VERSION) \
-	main.BuildUser=openwrt \
-	main.BuildHost=openwrt \
-	main.BuildStamp=$(SOURCE_DATE_EPOCH)
 
 define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=a web-accessible backup solution built on top of restic.
-	URL:=https://github.com/garethgeorge/backrest
   	DEPENDS:=+restic 
 endef
 
@@ -52,16 +33,19 @@ define Package/$(PKG_NAME)/description
 	Backrest is a web-accessible backup solution built on top of restic.   
 endef
 
-define Package/$(PKG_NAME)/install
-	# echo "++++++++++++++++++"
-	# echo "$(PKG_INSTALL_DIR)"
-	# echo "$(1)"
-	# echo "$(GO_PKG_BUILD_BIN_DIR)"
-	# echo "++++++++++++++++++"
 
-	$(INSTALL_DIR) $(1)/usr/bin/
-	$(INSTALL_BIN) $(GO_PKG_BUILD_BIN_DIR)/backrest $(1)/usr/bin/
+define Package/$(PKG_NAME)/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) ./files/backrest $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/backrest.init $(1)/etc/init.d/backrest
+	$(INSTALL_DIR) $(1)/etc/config
+	$(INSTALL_CONF) ./files/backrest.config $(1)/etc/config/backrest
 endef
 
-$(eval $(call GoBinPackage,$(PKG_NAME)))
+
+define Build/Compile
+	echo "$(PKG_NAME) using precompiled binary."
+endef
+
 $(eval $(call BuildPackage,$(PKG_NAME)))
