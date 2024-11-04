@@ -19,16 +19,14 @@ _err() {
 }
 
 start_service() {
-
+	config_load "${CONFIGURATION}"
 	local enabled
 	local addr_type
 	local port
 
-    
 	config_get enabled global enabled
 	config_get addr_type config addr_type
 	config_get port config port
-	
 	
 	if [[ "${addr_type}" == "local" ]]; then
 		addr="$(uci get network.loopback.ipaddr)"
