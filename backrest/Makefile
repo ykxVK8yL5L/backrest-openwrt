@@ -43,10 +43,9 @@ GO_PKG_LDFLAGS_X:=\
 define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
-	TITLE:=rsync for cloud storage.
+	TITLE:=a web-accessible backup solution built on top of restic.
 	URL:=https://github.com/garethgeorge/backrest
-  	DEPENDS:=+backrest \
-		+$(GO_ARCH_DEPENDS) 
+  	DEPENDS:=+restic 
 endef
 
 define Package/$(PKG_NAME)/description
