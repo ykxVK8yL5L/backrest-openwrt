@@ -1,4 +1,11 @@
 # 仅支持x86_64   
+
+---
+
+**Overview**
+
+Backrest 是一个基于[restic](https://restic.net/)的备份工具。
+
 # backrest-OpenWrt
 
 -   backrest
