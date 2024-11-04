@@ -15,7 +15,7 @@ Backrest 是一款基于 [restic](https://restic.net/) 构建的可通过 Web �
 ```
 wget https://github.com/ykxVK8yL5L/backrest-openwrt/releases/download/v1.0.1/backrest_1.6.1-1_x86_64.ipk   
 wget https://github.com/ykxVK8yL5L/backrest-openwrt/releases/download/v1.0.1/luci-app-backrest_1.0.1_all.ipk   
-wget https://github.com/ykxVK8yL5L/backrest-openwrt/releases/download/v1.0.1/luci-i18n-backrest-zh-cn_git-24.309.31899-1cc9a85_all.ipk   
+wget https://github.com/ykxVK8yL5L/backrest-openwrt/releases/download/v1.0.1/luci-i18n-backrest-zh-cn_git-24.309.31899-1cc9a85_all.ipk  
 opkg install backrest_1.6.1-1_x86_64.ipk 
 opkg install luci-app-backrest_1.0.1_all.ipk  
 opkg install luci-i18n-backrest-zh-cn_git-24.309.31899-1cc9a85_all.ipk 
