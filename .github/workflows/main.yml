@@ -56,7 +56,7 @@ jobs:
             mv -f openwrt-sdk-* openwrt-sdk
         - name: Build Package
           run: |
-            echo "src-link backrest $GITHUB_WORKSPACE/openwrt" > openwrt-sdk/feeds.conf
+            echo "src-link backrest $GITHUB_WORKSPACE" > openwrt-sdk/feeds.conf
             CONFIG_PACKAGE_restic=y
             echo 'CONFIG_PACKAGE_backrest=y
             CONFIG_PACKAGE_luci-app-backrest=y
