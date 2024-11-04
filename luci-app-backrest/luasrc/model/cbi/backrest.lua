@@ -72,4 +72,10 @@ o.datatype = 'port'
 o.rmempty = false
 
 
+o = s:option(Value, 'config_path', translate('backrest configuration file path'))
+o.placeholder = '/etc/backrest'
+o.default = '/etc/backrest'
+o.rmempty = false
+
+
 return m

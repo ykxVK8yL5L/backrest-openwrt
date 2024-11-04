@@ -70,6 +70,12 @@ jobs:
             make package/backrest/compile V=s
             make package/luci-app-backrest/compile V=s
             tree bin/packages/
+        
+        - name: Rename luci-i18n
+          run: |
+            mv openwrt-sdk/bin/packages/*/backrest/luci-i18n-backrest-zh-cn*.ipk openwrt-sdk/bin/packages/*/backrest/luci-i18n-backrest-zh-cn.ipk
+            mv openwrt-sdk/bin/packages/*/backrest/luci-i18n-backrest-en*.ipk openwrt-sdk/bin/packages/*/backrest/luci-i18n-backrest-en.ipk
+
         - name: Archive package
           uses: actions/upload-artifact@v3
           with:
