@@ -15,8 +15,8 @@ msgstr "Installed Web Interface"
 
 #: luci-app-backrest/luasrc/controller/backrest.lua:7
 #: luci-app-backrest/luasrc/model/cbi/backrest.lua:37
-msgid "backrest"
-msgstr "backrest"
+msgid "Backrest"
+msgstr "Backrest"
 
 #: luci-app-backrest/luasrc/model/cbi/backrest.lua:38
 msgid ""
@@ -43,6 +43,9 @@ msgstr "download"
 #: luci-app-backrest/luasrc/model/cbi/backrest.lua:76
 msgid "download configuration"
 msgstr "download configuration"
+
+msgid "backrestUI"
+msgstr "WebUI"
 
 #: luci-app-backrest/luasrc/model/cbi/backrest.lua:47
 msgid "global"

@@ -24,8 +24,8 @@ msgid "NAS"
 msgstr "存储"
 
 #: luasrc/model/cbi/backrest.lua:37 luasrc/controller/backrest.lua:6
-msgid "backrest"
-msgstr "backrest"
+msgid "Backrest"
+msgstr "Backrest"
 
 #: luasrc/model/cbi/backrest.lua:38
 msgid ""

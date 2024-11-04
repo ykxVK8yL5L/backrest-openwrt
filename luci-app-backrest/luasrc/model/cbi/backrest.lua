@@ -36,7 +36,7 @@ end
 m =
     Map(
     'backrest',
-    translate('backrest'),
+    translate('Backrest'),
     translate('Backrest is a web-accessible backup solution built on top of restic.') ..
         ' <br/> <br/> ' .. translate('backrest state') .. ' : ' .. state_msg .. '<br/> <br/>'
         .. address_msg ..                                      
