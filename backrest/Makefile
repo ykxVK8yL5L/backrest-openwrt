@@ -10,10 +10,10 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=backrest
-PKG_VERSION:=1.6.1
+PKG_VERSION:=1.7.0
 PKG_RELEASE:=1
 #PKG_SOURCE_URL:=https://github.com/garethgeorge/backrest.git
-# PKG_SOURCE_URL := https://github.com/garethgeorge/backrest/releases/download/v1.6.1
+# PKG_SOURCE_URL := https://github.com/garethgeorge/backrest/releases/download/v1.7.0
 # PKG_SOURCE:=backrest_Linux_x86_64.tar.gz
 # PKG_HASH=721856c8a5a59903ab22acc8cc57b042567bebe120b03576447b4b84f4861ad5
 # PKG_LICENSE:=GPLv3
